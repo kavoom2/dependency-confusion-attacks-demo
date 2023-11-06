@@ -1,0 +1,14 @@
+{
+  "name": "dependency-confusion-attacks-demo",
+  "version": "0.0.1",
+  "description": "demo project for testing dependency confusion attacks :)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-private-registry": "verdaccio --config ./config/verdaccio/config.yaml"
+  },
+  "repository": "https://github.com/kavoom2/dependency-confusion-attacks-demo.git",
+  "author": "kavoom2@gmail.com",
+  "license": "MIT",
+  "packageManager": "yarn@3.3.1"
+}

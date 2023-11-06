@@ -1,0 +1,19 @@
+#===========================================================================
+#
+#
+# [Verdaccio] - 로컬에서 비공개 패키지 저장소를 구축하기 위한 설정 파일입니다.
+# - 설정 파일 구성: https://verdaccio.org/docs/configuration/#https
+# - SSL 연결 구성: https://verdaccio.org/docs/ssl/
+# 
+#
+#===========================================================================
+
+storage: ./storage
+listen: http://localhost:4873/
+
+## 루트 디렉토리 (@dependency-confusion-attacks-demo 스크립트 실행 기준으로 작성되었습니다.)
+# https:
+#     key: ./config/verdaccio/ssl/verdaccio-key.pem
+#     cert: ./config/verdaccio/ssl/verdaccio-cert.pem
+#     ca: ./config/verdaccio/ssl/verdaccio-csr.pem
+

@@ -57,7 +57,8 @@ $ yarn add superlaser@1.0.0 ## 사설 패지키 저장소의 패키지가 설치
 ```
 
 ```yml
-## [Case 1]
+## yarn.lock
+## Case 1. 버전을 명시하지 않고 설치한 경우
 "superlaser@npm:^1.0.0":
   version: 1.99999.9999
   resolution: "superlaser@npm:1.99999.9999"
@@ -66,7 +67,7 @@ $ yarn add superlaser@1.0.0 ## 사설 패지키 저장소의 패키지가 설치
   linkType: hard
 
 
-## [Case 2]
+## Case 2. 사설 저장소의 버전에 맞추어 설치한 경우
 "superlaser@npm:1.0.0":
   version: 1.0.0
   resolution: "superlaser@npm:1.0.0"
@@ -86,7 +87,8 @@ $ yarn up superlaser
 
 정말 놀랍게도 악성 패키지가 대신 설치됩니다. :0...
 ```yml
-## [업데이트 전]
+## yarn.lock
+## 1. 업데이트 전
 "superlaser@npm:1.0.0":
   version: 1.0.0
   resolution: "superlaser@npm:1.0.0"
@@ -95,7 +97,7 @@ $ yarn up superlaser
   linkType: hard
 
 
-## [업데이트 후]
+## 2. 업데이트 후
 "superlaser@npm:^1.0.0":
   version: 1.99999.9999
   resolution: "superlaser@npm:1.99999.9999"

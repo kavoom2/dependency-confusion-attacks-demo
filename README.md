@@ -107,7 +107,8 @@ $ yarn up superlaser
 
 ```
 
-##3. Reference
+
+## 3. Reference
 - [[Snyk] Malicious Packages](https://docs.snyk.io/manage-risk/find-and-manage-priority-issues/malicious-packages#types-of-malicious-packages)
 - [[Snyk Blog] Detect and prevent dependency confusion attacks on npm to maintain supply chain security
 ](https://snyk.io/blog/detect-prevent-dependency-confusion-attacks-npm-supply-chain-security/?_gl=1*1abu5kz*_ga*MjAyMzU2MzczMS4xNjkzODAyMDc0*_ga_X9SH3KP7B4*MTY5NzA5ODY1OS4xMC4xLjE2OTcwOTk3OTQuMC4wLjA.)

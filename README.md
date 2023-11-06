@@ -37,7 +37,9 @@ $ npm publish  --registry http://localhost:4873
 
 
 아래와 같은 사진이 보이면 지금까지 잘 따라온 겁니다!
+<div>
 <img src="/docs/thumbnail-1.png" width="65%">
+</div>
 
 
 ## 2. 보안 취약점 확인해 보기

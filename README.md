@@ -43,7 +43,7 @@ $ npm publish  --registry http://localhost:4873
 
 
 ## 2. 보안 취약점 확인해 보기
-Dependency confusing attack은 Private npm registry에 등록된 네임 스페이스를 공개 저장소에도 등록할 수 있다는 점을 이용한 공격 방식입니다.
+Dependency confusing attack은 **비공개 저장소에 등록된 네임 스페이스를 공개 저장소에도 등록할 수 있다는 점**과 **패키지 관리자의 설계 결함**을 이용한 공격 방식입니다.
 
 예제에서 사용하는 패키지 중 [superlaser](https://www.npmjs.com/package/superlaser)는 악성 사용자가 공개 저장소에 등록했다고 가정합시다. (Snyk 아티클에서 제공해주는 예제 패키지입니다. :>)
 
@@ -108,6 +108,13 @@ $ yarn up superlaser
   linkType: hard
 
 ```
+
+악성 패키지에서 `preinstall`, `postinstall` 스크립트로 환경 변수를 탈취하는 등의 백도어 공격이 가능합니다.
+- [[NPM] Pre & Post Scripts](https://docs.npmjs.com/cli/v10/using-npm/scripts#pre--post-scripts)
+  - 패키지 설치 이전/이후 실행할 스크립트를 정의할 수 있습니다.
+  (Yarn berry에서는 lifecycle script를 모두 지원하지 않지만, postinstall은 사용할 수 있습니다.)
+- [[Yarn] Settings](https://yarnpkg.com/configuration/yarnrc#enableScripts)
+  - 현재 사용 중인 Yarn berry의 `postinstall` 실행 여부 기본 값은 `true`입니다. (즉, 악성 스크립트가 실행될 수 있음)
 
 
 ## 3. Reference
